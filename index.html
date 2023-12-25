@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dart The Dog</title>
+    <style>
+        body {
+            background-image: url("Pics/background.png");
+            background-size: 100%, 100%;
+            background-repeat: repeat-y;
+        }
+        .body {
+            text-align: center;
+            font-family: "Droid Serif";
+        }
+        .img {
+            width: 20%;
+            height: 20%;
+        }
+        .footnote {
+            text-align: center;
+            font-size: 15px;
+        }
+        .button-container {
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            cursor: pointer;
+        }
+        .button_1 {
+            justify-content: center;
+            border: 4px solid magenta;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+        .button_2 {
+            justify-content: center;
+            border: 4px solid palegreen;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+        .button_3 {
+            justify-content: center;
+            border: 4px solid aqua;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+        .button_4 {
+            justify-content: center;
+            border: 4px solid goldenrod;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1 class="body">Hello, I'm Dart The Dog</h1>
+<p class="body">Everyone loves me, and I'm always very good*</p>
+<div class="body">
+    <img class="img" width="20%" height="20%" id="randomImage">
+</div>
+<div class="button-container">
+    <div onclick="location.href='pet.html'" class="button_3">
+        <p>Pet</p>
+        <img src="Pics/pet_dog.png" width="50px" height="50px">
+    </div>
+    <div onclick="location.href='bark.html'" class="button_4">
+        <p>Bark</p>
+        <img src="Pics/bark.png" width="50px" height="50px">
+    </div>
+    <div onclick="location.href='pictures.html'" class="button_2">
+        <p>Pictures</p>
+        <img src="Pics/picture.png" width="50px" height="50px">
+    </div>
+</div>
+
+
+<p class="footnote">*Except for when I'm anxious, which is always</p>
+<script>
+    // Array containing the paths to the images
+    const images = [
+        'Default_1.jpg',
+        'Default_2.jpg',
+        'Default_3.jpg',
+        'Default_4.jpg'
+    ];
+
+    // Randomly select an index from the images array
+    const randomIndex = Math.floor(Math.random() * images.length);
+
+    // Get the image element by ID and set its source to the randomly selected image
+    const randomImage = document.getElementById('randomImage');
+    randomImage.src = images[randomIndex];
+</script>
+
+</body>
+</html>
